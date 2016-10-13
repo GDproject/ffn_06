@@ -1,5 +1,5 @@
 class Admin::CategoryMatchRatesController < ApplicationController
-  before_action :logged_in_user
+  before_action :logged_in_user, :verify_admin
   before_action :load_category_rates, only: [:edit, :show, :update]
 
   def index
